@@ -1,0 +1,38 @@
+{
+  "enable": {
+    "description": "总开关",
+    "type": "bool",
+    "hint": "关闭后不再挂任何输入状态。",
+    "default": true
+  },
+  "group_enable": {
+    "description": "群聊也显示",
+    "type": "bool",
+    "hint": "NapCat 的 set_input_status 目前只对私聊生效，群聊打开也可能没反应。",
+    "default": false
+  },
+  "event_type_typing": {
+    "description": "开始输入的事件类型",
+    "type": "int",
+    "hint": "1 = 正在输入。",
+    "default": 1
+  },
+  "event_type_stop": {
+    "description": "结束输入的事件类型",
+    "type": "int",
+    "hint": "3 = 取消正在输入（实测在 QQ 上有效；0/2/4 都试过无效）",
+    "default": 3
+  },
+  "heartbeat_interval": {
+    "description": "心跳续期间隔（秒）",
+    "type": "int",
+    "hint": "QQ 客户端的输入状态约 10 秒自动消失。任务未结束期间每隔这么久续一次，这样长耗时工具（本地 TTS、RVC、画图）执行时就不会看起来像已经结束。建议 5。",
+    "default": 5
+  },
+  "clear_delay": {
+    "description": "结束后的延迟（秒）",
+    "type": "float",
+    "hint": "消息发送完后等这么久再撤下状态，避免分段回复时每段之间闪烁。建议 3，设 0 表示立即撤下。",
+    "default": 3
+  }
+}

@@ -1,0 +1,9 @@
+name: astrbot_plugin_typing_status
+display_name: 正在输入状态
+desc: LLM 思考/回复/调用本地工具期间持续挂「对方正在输入」（心跳续期），结束后撤下。
+version: 1.1.0
+author: Caliton-KSP
+repo: https://github.com/Caliton-KSP/astrbot_plugin_typing_status
+astrbot_version: ">=4.26.0"
+support_platforms:
+  - aiocqhttp
